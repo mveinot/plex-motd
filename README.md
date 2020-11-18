@@ -14,4 +14,4 @@ Before:
 
 After:
 
-![alt text](https://raw.githubusercontent.com/ejach/plex-motd/patch-1/README/1.png)
+![alt text](https://raw.githubusercontent.com/ejach/plex-motd/patch-1/README/1.PNG)
