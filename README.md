@@ -10,5 +10,7 @@ Once you have edited the script and confirmed it is working, copy it to `/etc/up
 
 Before:
 ![alt text](https://raw.githubusercontent.com/mveinot/plex-motd/master/README/plex-motd.png)
+
 After:
-![alt text](https://raw.githubusercontent.com/mveinot/plex-motd/master/README/1.png)
+
+![alt text](https://raw.githubusercontent.com/ejach/plex-motd/master/README/1.png)
