@@ -6,7 +6,7 @@ from colored import fg, bg, attr, stylize
 
 server = 'localhost'
 port = '32400'
-plex_token = 'kC1Ec3FnF3MWWGAtC37o'
+plex_token = ''
 #----------------COLORS-----------------
 white = fg('white')
 yellow = fg('yellow')
