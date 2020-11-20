@@ -12,7 +12,7 @@ Additionally create a file called `plex_token.py` in the `/etc/update-motd.d/` d
 plex_token = 'YOUR_TOKEN_HERE'
 ```
 
-Replacing `YOUR_TOKEN_HERE` with your X-Plex-Token string obtained from your server.
+Replacing `YOUR_TOKEN_HERE` with your X-Plex-Token string obtained from your server. Ensure this file is not executable.
 
 Before:
 
