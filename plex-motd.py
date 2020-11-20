@@ -3,10 +3,10 @@
 import urllib.request
 import xml.etree.ElementTree as ET
 from colored import fg, bg, attr, stylize
+from plex_token import plex_token
 
 server = 'localhost'
 port = '32400'
-plex_token = ''
 #----------------COLORS-----------------
 white = fg('white')
 yellow = fg('yellow')
