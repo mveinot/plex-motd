@@ -14,10 +14,4 @@ plex_token = 'YOUR_TOKEN_HERE'
 
 Replacing `YOUR_TOKEN_HERE` with your X-Plex-Token string obtained from your server. Ensure this file is not executable.
 
-Before:
-
-![alt text](https://raw.githubusercontent.com/mveinot/plex-motd/master/README/plex-motd.png)
-
-After:
-
 ![alt text](https://raw.githubusercontent.com/ejach/plex-motd/patch-1/README/1.PNG)
