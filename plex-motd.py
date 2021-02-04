@@ -45,6 +45,8 @@ for item in root.findall('./Video'):
 			session[child.tag] = child.attrib['title']
 		if child.tag == 'Player':
 			session[child.tag] = child.attrib['title']
+		if child.tag == 'Media':
+			session[child.tag] = child.attrib['videoResolution']
 
 	sessions.append(session)
 print (stylize("CURRENT ", white) + stylize("PLEX ", yellow) + stylize("SESSIONS", white))
@@ -56,6 +58,6 @@ else:
 
 for session in sessions:
 	if session['Type'] == 'episode':
-		print (white + '- {0} is watching "{1} - S{2}E{3} - {4}" on {5}'.format(session['User'], session['Series'], session['Season'], session['Episode'], session['Title'], session['Player']) + reset)
+		print (white + '- {0} is watching "{1} - S{2}E{3} - {4}" on {5} in {6}'.format(session['User'], session['Series'], session['Season'], session['Episode'], session['Title'], session['Player'], session['Media']) + reset)
 	else:
-		print (white + '- {0} is watching "{1}" on {2}'.format(session['User'], session['Title'], session['Player']) + reset)
+		print (white + '- {0} is watching "{1}" on {2} in {3}'.format(session['User'], session['Title'], session['Player'], session['Media']) + reset)
