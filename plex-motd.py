@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
-import urllib.request
+import urllib.request, re
 import xml.etree.ElementTree as ET
 from colored import fg, bg, attr, stylize
 from plex_token import plex_token
 
+# if your configuration for server/port is different than the defaults, edit them accordingly
 server = 'localhost'
 port = '32400'
 #----------------COLORS-----------------
@@ -58,6 +59,6 @@ else:
 
 for session in sessions:
 	if session['Type'] == 'episode':
-		print (white + '- {0} is watching "{1} - S{2}E{3} - {4}" on {5} in {6}'.format(session['User'], session['Series'], session['Season'], session['Episode'], session['Title'], session['Player'], session['Media']) + reset)
+		print (white + '- {0} is watching "{1} - S{2}E{3} - {4}" on {5} in {6}'.format(session['User'], session['Series'], session['Season'], session['Episode'], session['Title'], session['Player'], session['Media']) + reset if re.search('[a-zA-Z]', session["Media"]) else '- {0} is watching "{1} - S{2}E{3} - {4}" on {5} in {6}p'.format(session['User'], session['Series'], session['Season'], session['Episode'], session['Title'], session['Player'], session['Media']) + reset)
 	else:
-		print (white + '- {0} is watching "{1}" on {2} in {3}'.format(session['User'], session['Title'], session['Player'], session['Media']) + reset)
+		print (white + '- {0} is watching "{1}" on {2} in {3}'.format(session['User'], session['Title'], session['Player'], session['Media']) + reset if re.search('[a-zA-Z]', session["Media"]) else white + '- {0} is watching "{1}" on {2} in {3}p'.format(session['User'], session['Title'], session['Player'], session['Media']) + reset)
