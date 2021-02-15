@@ -3,7 +3,7 @@ Display current Plex sessions in Ubuntu MOTD output
 
 # Installation
 
-- **You will need Python 3.5 or later** - it may (probably will) work with Python 3 or later, but I haven't tested it. This also uses the [colored](https://pypi.org/project/colored/) Python module.
+- **You will need Python 3.5 or later** - it may (probably will) work with Python 3 or later, but I haven't tested it.
 
 - Run `pip3 install -r requirements.txt` to install the required Python packages.
 
