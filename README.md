@@ -15,4 +15,4 @@ Display current Plex sessions in Ubuntu MOTD output
 
 - Replace `YOUR_TOKEN_HERE` with your X-Plex-Token string obtained from your server. **Ensure this file is not executable**.
 
-![alt text](https://raw.githubusercontent.com/ejach/plex-motd/patch-1/README/1.PNG)
+![alt text](https://raw.githubusercontent.com/mveinot/plex-motd/master/README/1.PNG)
