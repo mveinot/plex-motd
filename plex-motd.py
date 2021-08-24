@@ -38,7 +38,7 @@ def request_open():
 		if e.code == 401:
 			print(str(e) + '\n Please make sure your Plex token is correct and try again')
 	except error.URLError as e:
-		print(str(e.reason) + '\n Please make sure the Plex host is pointing to the right address and try again')
+		print(str(e.reason) + '\n Please make sure the server address is correct and try again')
 
 
 fp, mybytes = request_open()
