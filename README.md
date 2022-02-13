@@ -15,4 +15,4 @@ Display current Plex sessions in Ubuntu MOTD output
 
 - Move the `.env` file in the `/etc/update-motd.d/` directory.
 
-![alt text](https://raw.githubusercontent.com/mveinot/plex-motd/master/README/1.PNG)
+![alt text](https://raw.githubusercontent.com/mveinot/plex-motd/master/README/1.png)
