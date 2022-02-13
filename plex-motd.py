@@ -51,11 +51,11 @@ root = XML(xmlstr)
 # calculate the bandwidth
 def bandwidth():
     session_arr = []
-    for this in root.findall('./Video/Session'):
-        session_arr.append(this.attrib['bandwidth'])
+    for item in root.findall('./Video/Session'):
+        session_arr.append(item.attrib['bandwidth'])
     res = [float(i) for i in session_arr]
-    calc = str(round(sum(res) * 0.001, 2)) + ' Mb/s' \
-        if round(sum(res) * 0.001, 2) > 1 else str(round(sum(res) * 0.1, 2)) + ' Kb/s'
+    calc = str(round(sum(res) * 0.001, 1)) + ' Mb/s' \
+        if round(sum(res) * 0.001, 1) > 1 else str(round(sum(res), 1)) + ' Kb/s'
     return calc if calc[:3] != '0.0' else None
 
 
