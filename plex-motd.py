@@ -56,7 +56,7 @@ def bandwidth():
     res = [float(i) for i in session_arr]
     calc = str(round(sum(res) * 0.001, 1)) + ' Mb/s' \
         if round(sum(res) * 0.001, 1) > 1 else str(round(sum(res), 1)) + ' Kb/s'
-    return calc if float(calc[:2]) > 0  else None
+    return calc if float(calc[:1]) > 0 else None
 
 
 # traverse the XML looking for session data
