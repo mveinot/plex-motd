@@ -98,10 +98,11 @@ for session in sessions:
             white + f'- {session["User"]} is watching "{session["Series"]} - '
                     f'S{session["Season"]}E{session["Episode"]} '
                     f'- {session["Title"]}" on {session["Player"]} in {session["Media"]}'
-            + reset if search('[a-zA-Z]', session["Media"]) else f'- {session["User"]} is watching '
-                                                                 f'"{session["Series"]} - S{session["Season"]}'
-                                                                 f'E{session["Episode"]} - {session["Title"]}" on '
-                                                                 f'{session["Player"]} in {session["Media"]}p' + reset)
+            + reset if search('[a-zA-Z]', session["Media"]) else white + f'- {session["User"]} is watching '
+                                                                         f'"{session["Series"]} - S{session["Season"]} '
+                                                                         f'E{session["Episode"]} - '
+                                                                         f'{session["Title"]}" on {session["Player"]} '
+                                                                         f'in {session["Media"]}p' + reset)
     else:
         print(
             white + f'- {session["User"]} is watching "{session["Title"]}" on {session["Player"]} in {session["Media"]}'
