@@ -15,7 +15,7 @@ port = str(getenv('port'))
 plex_token = str(getenv('plex_token'))
 # ----------------COLORS-----------------
 white = '\033[1;37m'
-yellow = '\u001b[33m'
+yellow = '\u001b[1;33m'
 green = '\u001b[32m'
 red = '\u001b[31m'
 reset = '\u001b[0m'
@@ -87,7 +87,7 @@ if bandwidth():
 if sessionNum == 1:
     print(white + 'Currently, ' + green + str(sessionNum) + white + ' user is in a session:' + reset)
 else:
-    print(white + 'Currently, ' + red + '0' + ' users are in a session.' + reset
+    print(white + 'Currently, ' + red + '0' + white + ' users are in a session.' + reset
           if not sessions else
           white + 'Currently, ' + green + str(sessionNum) + white + ' users are in a session.' + reset)
 
