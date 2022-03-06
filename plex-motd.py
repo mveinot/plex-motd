@@ -4,7 +4,6 @@ from re import search
 from urllib import request, error
 from xml.etree.ElementTree import XML
 
-from colored import fg, attr, stylize
 from dotenv import load_dotenv
 
 # loads the environment variables from the .env file
@@ -15,11 +14,11 @@ server = str(getenv('server'))
 port = str(getenv('port'))
 plex_token = str(getenv('plex_token'))
 # ----------------COLORS-----------------
-white = fg('white')
-yellow = fg('yellow')
-green = fg('green')
-red = fg('red')
-reset = attr('reset')
+white = '\033[1;37m'
+yellow = '\u001b[33m'
+green = '\u001b[32m'
+red = '\u001b[31m'
+reset = '\u001b[0m'
 # ---------------------------------------
 
 # session array
@@ -81,16 +80,16 @@ for item in root.findall('./Video'):
             session[child.tag] = child.attrib['videoResolution']
 
     sessions.append(session)
-print(stylize('CURRENT ', white) + stylize('PLEX ', yellow) + stylize('SESSIONS', white))
+print(white + 'CURRENT ' + yellow + 'PLEX ' + white + 'SESSIONS' + reset)
 sessionNum = len(sessions)
 if bandwidth():
-    print(stylize('Estimated bandwidth usage: ', white) + stylize(bandwidth(), white))
+    print(white + 'Estimated bandwidth usage: ' + bandwidth() + reset)
 if sessionNum == 1:
-    print(stylize('Currently, ', white) + stylize(sessionNum, green) + stylize(' user is in a session:', white))
+    print(white + 'Currently, ' + green + str(sessionNum) + white + ' user is in a session:' + reset)
 else:
-    print(stylize('Currently, ', white) + stylize('0', red) + stylize(' users are in a session.', white)
+    print(white + 'Currently, ' + red + '0' + ' users are in a session.' + reset
           if not sessions else
-          stylize('Currently, ', white) + stylize(sessionNum, green) + stylize(' users are in a session:', white))
+          white + 'Currently, ' + green + str(sessionNum) + white + ' users are in a session.' + reset)
 
 for session in sessions:
     if session['Type'] == 'episode':
