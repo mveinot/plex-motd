@@ -15,7 +15,7 @@ port = str(getenv('port'))
 plex_token = str(getenv('plex_token'))
 # ----------------COLORS-----------------
 white = '\033[1;37m'
-yellow = '\u001b[1;33m'
+yellow = '\u001b[38;5;214m'
 green = '\u001b[32m'
 red = '\u001b[31m'
 reset = '\u001b[0m'
