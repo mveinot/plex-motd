@@ -5,9 +5,10 @@ from urllib import request, error
 from xml.etree.ElementTree import XML
 
 # if your configuration for server/port is different from the defaults, edit them accordingly in the env variables
-server = str(getenv('server'))
-port = str(getenv('port'))
+server = str(getenv('plex_server'))
+port = str(getenv('plex_port'))
 plex_token = str(getenv('plex_token'))
+
 # ----------------COLORS-----------------
 white = '\033[1;37m'
 yellow = '\u001b[38;5;214m'
