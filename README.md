@@ -5,7 +5,7 @@ Display current Plex sessions in Ubuntu MOTD output
 
 - **You will need Python 3.5 or later** - it may (probably will) work with Python 3 or later, but I haven't tested it.
 
-- Export the following environment variables
+- [Export](https://help.ubuntu.com/community/EnvironmentVariables) the following environment variables
 ```bash
 # if your configuration for server/port is different than the defaults, edit them accordingly
 server=localhost
