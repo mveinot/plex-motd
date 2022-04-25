@@ -5,16 +5,14 @@ Display current Plex sessions in Ubuntu MOTD output
 
 - **You will need Python 3.5 or later** - it may (probably will) work with Python 3 or later, but I haven't tested it.
 
-- [Export](https://help.ubuntu.com/community/EnvironmentVariables#A.2Fetc.2Fenvironment) the following environment variables by adding them to the `/etc/environment` file
-```bash
-# if your configuration for server/port is different than the defaults, edit them accordingly
-plex_server=localhost
-plex_port=32400
-# Replace 'YOUR_TOKEN_HERE' with your X-Plex-Token string obtained from your server.
-plex_token=YOUR_TOKEN_HERE
-```
+- Run `pip3 install -r requirements.txt` to install the required Python packages.
+
+- Edit `server` and `port` in the `.env` file if they are different than the defaults.
+
+- Replace `YOUR_TOKEN_HERE` with your X-Plex-Token string obtained from your server.
 
 - Once you have edited the script and confirmed it is working, copy it to `/etc/update-motd.d/` with an appropriate name - (`95-plex` is recommended)
 
+- Move the `.env` file in the `/etc/update-motd.d/` directory.
 
 ![alt text](https://raw.githubusercontent.com/mveinot/plex-motd/master/README/1.png)
