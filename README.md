@@ -16,6 +16,5 @@ plex_token=YOUR_TOKEN_HERE
 
 - Once you have edited the script and confirmed it is working, copy it to `/etc/update-motd.d/` with an appropriate name - (`95-plex` is recommended)
 
-- Move the `.env` file in the `/etc/update-motd.d/` directory.
 
 ![alt text](https://raw.githubusercontent.com/mveinot/plex-motd/master/README/1.png)
